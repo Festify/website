@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Get your Party started with Festify</title>
+
+    <!--<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">-->
+    <link rel="stylesheet" href="/css/style.min.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <style>
+        #seen-on .inner{text-align:center}
+        #seen-on a{display:inline-block;margin:20px;opacity:.8;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-ms-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s}
+        #seen-on a img{display:inline-block;margin:0;height:40px; width: auto;}
+        #seen-on a:hover {opacity: 1}
+    </style>
+
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="Festify is a free Spotify-powered party app that lets your guests choose which music should be played using their smartphones. Download it today!">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name=”twitter:site” content=”@GetFestify”>
+    <meta name="twitter:image" content="http://getfestify.com/img/festify-logo.png">
+    <meta name="twitter:title" content="Get your Party started with Festify!">
+    <meta name="twitter:description" content="Festify is a free Spotify-powered party app that lets your guests choose which music should be played using their smartphones. Download it today!">
+</head>
+<body itemscope itemtype="http://schema.org/SoftwareApplication">
+
+<header class="bright">
+    <div class="inner">
+        <a href="/" class="logo">
+            <img src="/img/festify-logo-beta-small.png" itemprop="thumbnailUrl" width="40" height="40" alt="Festify Logo">
+            <span class="brand" itemprop="name">Festify</span>
+        </a>
+    </div>
+</header>
+
+<section class="dark" id="start">
+    <div class="party-background"></div>
+
+    <div class="inner">
+        <img src="/img/festify-logo.svg" height="190" width="190" class="logo" alt="Festify Logo">
+
+        <h1>Vielen Dank für deine Spende!</h1>
+
+        <p class="jumbo" itemprop="description">
+            Leute wie Du sind der Grund, warum wir so gerne an Festify arbeiten, um es noch besser zu machen.<br>
+            Viel Spaß beim Feiern! // Leo Bernard & Moritz Gunz
+        </p>
+    </div>
+</section>
+
+<section class="bright" id="social">
+    <div class="inner">
+        <ul class="social">
+            <li>
+                <a href="https://twitter.com/getfestify" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="/feedback.html" title="Report a bug or submit an idea"><i class="fa fa-bug"></i></a>
+            </li>
+            <li>
+                <a href="mailto:mail@getfestify.de" title="Write us a mail"><i class="fa fa-envelope-o"></i></a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<footer class="dark">
+    <div class="inner">
+        <p class="left">
+            &copy; <span itemprop="author">Leo Bernard & Moritz Gunz</span> 2015 / <a href="impressum.html">Impressum</a>
+        </p>
+
+        <p class="right">
+            Made with <i class="fa fa-heart"></i> in Germany
+        </p>
+
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61806395-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script>!function(){function a(){}function b(a){return f.retinaImageSuffix+a}function c(a,c){if(this.path=a||"","undefined"!=typeof c&&null!==c)this.at_2x_path=c,this.perform_check=!1;else{if(void 0!==document.createElement){var d=document.createElement("a");d.href=this.path,d.pathname=d.pathname.replace(g,b),this.at_2x_path=d.href}else{var e=this.path.split("?");e[0]=e[0].replace(g,b),this.at_2x_path=e.join("?")}this.perform_check=!0}}function d(a){this.el=a,this.path=new c(this.el.getAttribute("src"),this.el.getAttribute("data-at2x"));var b=this;this.path.check_2x_variant(function(a){a&&b.swap()})}var e="undefined"==typeof exports?window:exports,f={retinaImageSuffix:"@2x",check_mime_type:!0,force_original_dimensions:!0};e.Retina=a,a.configure=function(a){null===a&&(a={});for(var b in a)a.hasOwnProperty(b)&&(f[b]=a[b])},a.init=function(a){null===a&&(a=e);var b=a.onload||function(){};a.onload=function(){var a,c,e=document.getElementsByTagName("img"),f=[];for(a=0;a<e.length;a+=1)c=e[a],c.getAttributeNode("data-no-retina")||f.push(new d(c));b()}},a.isRetina=function(){var a="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";return e.devicePixelRatio>1?!0:e.matchMedia&&e.matchMedia(a).matches?!0:!1};var g=/\.\w+$/;e.RetinaImagePath=c,c.confirmed_paths=[],c.prototype.is_external=function(){return!(!this.path.match(/^https?\:/i)||this.path.match("//"+document.domain))},c.prototype.check_2x_variant=function(a){var b,d=this;return this.is_external()?a(!1):this.perform_check||"undefined"==typeof this.at_2x_path||null===this.at_2x_path?this.at_2x_path in c.confirmed_paths?a(!0):(b=new XMLHttpRequest,b.open("HEAD",this.at_2x_path),b.onreadystatechange=function(){if(4!==b.readyState)return a(!1);if(b.status>=200&&b.status<=399){if(f.check_mime_type){var e=b.getResponseHeader("Content-Type");if(null===e||!e.match(/^image/i))return a(!1)}return c.confirmed_paths.push(d.at_2x_path),a(!0)}return a(!1)},b.send(),void 0):a(!0)},e.RetinaImage=d,d.prototype.swap=function(a){function b(){c.el.complete?(f.force_original_dimensions&&(c.el.setAttribute("width",c.el.offsetWidth),c.el.setAttribute("height",c.el.offsetHeight)),c.el.setAttribute("src",a)):setTimeout(b,5)}"undefined"==typeof a&&(a=this.path.at_2x_path);var c=this;b()},a.isRetina()&&a.init(e)}();</script>
+</body>
+</html>

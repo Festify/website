@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Festify Stats</title>
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <style>
+        .bar {
+            display: block;
+            height: 100px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .bar .component {
+            height: 100%;
+            box-sizing: border-box;
+            transition: width 0.5s;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .bar .component.primary {
+            float: left;
+            background: rgb(137, 168, 186);
+        }
+
+        .bar .component.secondary {
+            float: right;
+            background: rgb(124, 215, 171);
+        }
+    </style>
+</head>
+<body class="noheader">
+<section class="version dark">
+    <div class="inner">
+        <h2>Party creations</h2>
+
+        <canvas id="partyChart" width="1032" height="500"></canvas>
+    </div>
+</section>
+<section class="version bright">
+    <div class="inner">
+        <h2>Ratio of tracks queued vs. tracks played</h2>
+
+        <div class="bar">
+            <div class="component primary" id="queuedTracks" style="width: 0;">Queued</div>
+            <div class="component secondary" id="playedTracks" style="width: 0;">Played</div>
+        </div>
+    </div>
+</section>
+<section class="version dark">
+    <div class="inner">
+        <h2>Tracks</h2>
+
+        <canvas id="trackChart" width="1032" height="500"></canvas>
+    </div>
+</section>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1-beta.2/Chart.min.js"></script>
+<script src="bower_components/jQuery/dist/jquery.min.js"></script>
+<script>
+    $(window).load(function(){
+        $.get("https://festify.us/api/stats/daily").success(function(data){
+            console.log(data);
+
+            var parties = [];
+            var tracks = [];
+
+            for(var i = 0; i < data.parties.length; i++) {
+                parties.push({
+                    date: Date.parse(data.parties[i]._id.year + "-" + data.parties[i]._id.month + "-" + data.parties[i]._id.day),
+                    data: data.parties[i].count
+                });
+            }
+
+            for(i = 0; i < data.tracks.played.length; i++) {
+                var date = Date.parse(data.tracks.played[i]._id.year + "-" +  data.tracks.played[i]._id.month + "-" +  data.tracks.played[i]._id.day);
+
+                tracks.push({
+                    date: date,
+                    data: {played: data.tracks.played[i].count}
+                });
+            }
+
+            parties.sort(function(a, b){
+                return (a.date > b.date ? 1 : -1);
+            });
+
+            tracks.sort(function(a, b){
+                return (a.date > b.date ? 1 : -1);
+            });
+
+            parties = parties.slice(Math.max(0, parties.length-25), parties.length);
+            tracks  = tracks.slice(Math.max(0, tracks.length-25), tracks.length);
+
+            var barChartDataParty = {
+                labels : parties.map(function(date){return new Date(date.date).toDateString()}),
+                datasets : [
+                    {
+                        fillColor: "rgba(151,187,205,0.5)",
+                        strokeColor: "rgba(151,187,205,0.8)",
+                        highlightFill: "rgba(151,187,205,0.75)",
+                        highlightStroke: "rgba(151,187,205,1)",
+                        data : parties.map(function(date){return date.data})
+                    }
+                ]
+            };
+
+            var barChartDataTracks = {
+                labels : tracks.map(function(date){return new Date(date.date).toDateString()}),
+                datasets : [
+                    {
+                        fillColor: "rgba(151,255,205,0.5)",
+                        strokeColor: "rgba(151,255,205,0.8)",
+                        highlightFill: "rgba(151,255,205,0.75)",
+                        highlightStroke: "rgba(151,255,205,1)",
+                        data : tracks.map(function(date){return date.data.played})
+                    }
+                ]
+            };
+
+            var partyChart = document.getElementById("partyChart").getContext("2d");
+            var trackChart = document.getElementById("trackChart").getContext("2d");
+
+            new Chart(partyChart).Bar(barChartDataParty, {
+                showTooltips: true
+            });
+
+            new Chart(trackChart).Bar(barChartDataTracks, {
+                showTooltips: true
+            });
+        });
+
+        $.get("https://festify.us/api/stats").success(function(data){
+            $("#playedTracks").css({width: (data.tracks.played * 100 / data.tracks.queued) + "%"});
+            $("#queuedTracks").css({width: ((data.tracks.queued - data.tracks.played) * 100 / data.tracks.queued) + "%"});
+        });
+    });
+</script>
+</body>
+</html>

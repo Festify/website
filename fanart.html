@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Submit Feedback - Festify</title>
+
+    <!--<link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">-->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="If Festify couldn't find any fanart for an artist, just tell us which artist you were listening to and we'll try to correct it as soon as possible.">
+
+    <meta name=”twitter:site” content=”@GetFestify”>
+    <meta name="twitter:image" content="http://getfestify.de/img/festify-logo-beta.png">
+
+    <style>
+         input {
+             width: 100%;
+             background-color: #1c1f24;
+             outline: none;
+         }
+
+         .twitter-typeahead {
+             width: 100%;
+             box-sizing: border-box;
+         }
+
+        .typeahead,
+        .tt-query,
+        .tt-hint {
+            width: 100%;
+            box-sizing: border-box;
+            height: 49px;
+            padding: 8px 12px;
+            font-size: 24px;
+            line-height: 30px;
+            outline: none;
+        }
+
+        .typeahead {
+            background-color: #1c1f24;
+        }
+
+        .typeahead:focus {
+            border: 2px solid #282b30;
+        }
+
+        .tt-query {
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        }
+
+        .tt-hint {
+            color: #999
+        }
+
+        .tt-dropdown-menu {
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: -10px;
+            padding: 8px 0;
+            background-color: #1c1f24;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top: none;
+        }
+
+        .tt-suggestion {
+            padding: 3px 20px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .tt-suggestion.tt-cursor {
+            background-color: #282b30;
+        }
+
+        .tt-suggestion p {
+            margin: 0;
+        }
+
+        #musicBrainzResults {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: #1c1f24;
+            max-height: 300px;
+            overflow-y: auto;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px;
+            display: none;
+        }
+
+        #musicBrainzResults li {
+            margin: 0;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+         #musicBrainzResults li:hover, #musicBrainzResults li.active {
+             background-color: #282b30;
+         }
+    </style>
+</head>
+<body>
+
+<header class="bright">
+    <div class="inner">
+        <a href="/" class="logo">
+            <img src="img/festify-logo-beta-small.png" width="40" height="40">
+            <span class="brand">Festify</span>
+        </a>
+    </div>
+</header>
+
+<section class="dark" id="start">
+    <div class="party-background"></div>
+
+    <div class="inner">
+        <h1>Report a missing or wrong fanart!</h1>
+
+        <p class="jumbo">
+            If Festify couldn't find any fanart for an artist, just tell us which artist
+            you were listening to and we'll try to correct it as soon as possible.
+        </p>
+    </div>
+</section>
+
+<section class="bright" id="feedback">
+    <div class="inner">
+        <div class="error-text">
+            <h2>Oops, something went wrong while submitting your feedback. Please send us a mail.</h2>
+        </div>
+
+        <div class="success-text">
+            <h2>Thanks for your Feedback! We'll respond as soon as possible.</h2>
+        </div>
+
+        <div class="form">
+            <input id="artistName" type="text" placeholder="Artist Name">
+
+            <ul id="musicBrainzResults">
+            </ul>
+
+            <button id="submitRequestBtn" class="btn btn-primary btn-block btn-disabled">Submit Request</button>
+        </div>
+    </div>
+</section>
+
+<footer class="dark">
+    <div class="inner">
+        <p class="left">
+            &copy; Leo Bernard & Moritz Gunz 2015 / <a href="impressum.html">Impressum</a>
+        </p>
+
+        <p class="right">
+            Made with <i class="fa fa-heart"></i> in Germany
+        </p>
+
+        <div class="clearfix"></div>
+    </div>
+</footer>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/typeahead.js/dist/typeahead.bundle.min.js"></script>
+
+<script>
+    var selectedSpotifyArtist = null;
+    var selectedMusicBrainzArtist = null;
+
+    $(document).ready(function () {
+        var spotifyArtists = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            remote: {
+                url: 'https://api.spotify.com/v1/search?type=artist&q=%QUERY',
+                filter: function (response) {
+                    console.log("Response:", response);
+                    return response.artists.items;
+                }
+            }
+        });
+
+        spotifyArtists.initialize();
+
+        $('#artistName').typeahead(null, {
+            name: 'spotify-artists',
+            displayKey: 'name',
+            source: spotifyArtists.ttAdapter()
+        }).bind("typeahead:selected", function(obj, datum, name) {
+            selectedSpotifyArtist = datum;
+            selectedMusicBrainzArtist = null;
+            $("#submitRequestBtn").addClass("btn-disabled");
+
+            $.get('http://musicbrainz.org/ws/2/artist/?query=' + encodeURI(datum.name) + '&fmt=json')
+                .done(function(response) {
+                    $("#musicBrainzResults").empty();
+                    var artists = response.artists;
+
+                    for(var i = 0; i < artists.length; i++) {
+                        $("#musicBrainzResults").append('<li data-id="' + artists[i].id + '"><strong>' + artists[i].name + '</strong> - ' + (artists[i].disambiguation || artists[i].type) + '</li>')
+                    }
+
+                    $("#musicBrainzResults").fadeIn();
+                });
+        });
+
+        $("#musicBrainzResults").on("click", "li", function() {
+            selectedMusicBrainzArtist = $(this).attr("data-id");
+            $("#musicBrainzResults li").removeClass("active");
+            $("#submitRequestBtn").removeClass("btn-disabled");
+            $(this).addClass("active");
+        });
+    })
+    ;
+</script>
+
+<script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["setCookieDomain", "*.getfestify.com"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "//stats.leolabs.org/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', 24]);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+</script>
+<noscript><p><img src="//stats.leolabs.org/piwik.php?idsite=24" style="border:0;" alt=""/></p></noscript>
+</body>
+</html>
