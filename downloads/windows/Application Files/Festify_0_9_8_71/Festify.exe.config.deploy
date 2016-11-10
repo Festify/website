@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<configSections>
+		<sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<section name="Festify.Desktop.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+		</sectionGroup>
+		<section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
+	</configSections>
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.1"/>
+	</startup>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="System.Net.Http.Primitives" publicKeyToken="b03f5f7f11d50a3a" culture="neutral"/>
+				<bindingRedirect oldVersion="0.0.0.0-4.2.13.0" newVersion="4.2.13.0"/>
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"/>
+				<bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0"/>
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="NLog" publicKeyToken="5120e14c03d0593c" culture="neutral"/>
+				<bindingRedirect oldVersion="0.0.0.0-3.2.1.0" newVersion="3.2.1.0"/>
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+	<userSettings>
+		<Festify.Desktop.Properties.Settings>
+			<setting name="SpotifyCacheDirectory" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="SpotifyCacheSize" serializeAs="String">
+				<value>0</value>
+			</setting>
+			<setting name="SpotifyUsername" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="SpotifyLoginBlob" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="SpotifySettingsDirectory" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="NormalizeVolume" serializeAs="String">
+				<value>True</value>
+			</setting>
+			<setting name="CrossfadeDuration" serializeAs="String">
+				<value>00:00:05</value>
+			</setting>
+			<setting name="PerformCrossfade" serializeAs="String">
+				<value>True</value>
+			</setting>
+			<setting name="IsSettingsUpgradeRequired" serializeAs="String">
+				<value>True</value>
+			</setting>
+			<setting name="LoadExternalPlugins" serializeAs="String">
+				<value>True</value>
+			</setting>
+			<setting name="PreviousParties" serializeAs="String">
+				<value>[]</value>
+			</setting>
+			<setting name="DoFadeOutControlsOnMouseOver" serializeAs="String">
+				<value>True</value>
+			</setting>
+			<setting name="IcecastUrl" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="IcecastUsername" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="IcecastPassword" serializeAs="String">
+				<value/>
+			</setting>
+			<setting name="IcecastPort" serializeAs="String">
+				<value>0</value>
+			</setting>
+			<setting name="UserGuid" serializeAs="String">
+				<value>00000000-0000-0000-0000-000000000000</value>
+			</setting>
+		</Festify.Desktop.Properties.Settings>
+	</userSettings>
+	<nlog autoReload="true">
+		<variable name="defaultLayout" value="${longdate} | ${level:uppercase=true} | ${logger} | ${message} | ${exception:format=tostring}"/>
+		<targets async="true">
+			<target name="log" type="File" fileName="${specialfolder:folder=LocalApplicationData}/Festify/Log.log" layout="${defaultLayout}"/>
+			<target name="debug" type="File" fileName="${specialfolder:folder=LocalApplicationData}/Festify/Debug.log" layout="${defaultLayout}"/>
+			<target name="trace" type="File" fileName="${specialfolder:folder=LocalApplicationData}/Festify/Trace.log" layout="${defaultLayout}"/>
+			<target name="console" type="Console" layout="${defaultLayout}"/>
+		</targets>
+		<rules>
+			<logger name="*" minlevel="Info" writeTo="log"/>
+			<logger name="*" minlevel="Debug" writeTo="debug"/>
+			<logger name="Festify.*" minlevel="Info" writeTo="console"/>
+		</rules>
+	</nlog>
+</configuration>
