@@ -1,3 +1,6 @@
+@import "../bower_components/normalize.css/normalize.css";
+@import "../bower_components/fontawesome/css/font-awesome.css";
+
 @background: #1c1f24;
 @background2: #282b30;
 @colorlessBackground: rgba(0,0,0,0.5);
@@ -186,7 +189,7 @@ header {
     }
   }
 
-  .download {
+  .download, .join-party {
     position: absolute;
     right: 0;
     height: @headerHeight;
@@ -199,7 +202,7 @@ header {
       background-color: rgba(0,0,0,0.2);
     }
 
-    &.red {
+    &.red, &.join-party {
       background-color: @primary;
 
       &:hover {
@@ -545,9 +548,21 @@ footer {
   }
 }
 
+.join-party {
+  display: none;
+}
+
 @media (max-width: 450px) {
   #start .inner {
     position: relative !important;
+  }
+
+  .join-party {
+    display: block;
+  }
+
+  .download {
+    display: none;
   }
 }
 
