@@ -8,38 +8,40 @@ var unCSS = require('gulp-uncss');
 var htmlMinifier = require('gulp-html-minifier');
 var imagemin = require('gulp-imagemin');
 var del = require('del');
+const path = require('path');
 
-gulp.task('bower_components', function() {
-    return gulp.src('*bower_components/*').pipe(gulp.dest('build'));
-});
+const dist = 'build';
 
-gulp.task('html', function() {
-    return gulp.src([
-        '*.html',
-        '*donation-thanks/*.html',
-        '*help/*.html'
-    ])
+gulp.task('pages', function() {
+    return gulp.src('pages/**/*.html')
     .pipe(htmlMinifier({
         collapseWhitespace: true,
         minifyJS: true
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest(dist));
 });
 
 gulp.task('styles', function() {
     return gulp.src(['css/style.less'])
         .pipe(less())
         .pipe(unCSS({
-            html: ['**/*.html']
+            html: ['pages/**/*.html']
         }))
         .pipe(minifyCSS({keepSpecialComments: 0}))
-        .pipe(gulp.dest('build/css'));
+        .pipe(gulp.dest(path.join(dist, 'css')));
 });
 
-gulp.task('images', function() {
-    return gulp.src('*img/**/*.png')
-        .pipe(imagemin())
-        .pipe(gulp.dest('build'));
+gulp.task('assets', function() {
+    return gulp.src([
+        'fonts/**/*',
+        'img/**/*',
+        'js/**/*',
+        'bower_components/**/*',
+        'favicon.ico'
+    ], { base: './' })
+    .pipe(gulp.dest(dist));
 });
 
-gulp.task('default', ['bower_components', 'styles', 'html', 'images']);
+gulp.task('build', ['styles', 'pages', 'assets']);
+
+gulp.task('default', ['build']);
