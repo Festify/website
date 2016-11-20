@@ -595,6 +595,35 @@ footer {
   }
 }
 
+
+#seen-on {
+  .inner {
+    text-align: center
+  }
+
+  a {
+    display: inline-block;
+    margin: 20px;
+    opacity: .8;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -ms-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+
+    img {
+      display: inline-block;
+      margin: 0;
+      height: 40px;
+      width: auto;
+    }
+
+    &:hover {
+      opacity: 1
+    }
+  }
+}
+
 @media (max-width: 945px) {
   #more .steps li {
     margin: 0 20px;
