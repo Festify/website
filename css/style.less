@@ -3,26 +3,26 @@
 
 @background: #1c1f24;
 @background2: #282b30;
-@colorlessBackground: rgba(0,0,0,0.5);
+@colorlessBackground: rgba(0, 0, 0, 0.5);
 @primary: rgb(149, 21, 24);
 @success: rgb(26, 93, 34);
 @headerHeight: 58px;
 
 @font-face {
   font-family: OpenSans;
-  src: url('../fonts/OpenSans-Light.ttf');
+  src: url('../bower_components/open-sans-fontface/fonts/Light/OpenSans-Light.svg');
   font-weight: 300;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url('../fonts/OpenSans-Regular.ttf');
+  src: url('../bower_components/open-sans-fontface/fonts/Regular/OpenSans-Regular.svg');
   font-weight: 400;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url('../fonts/OpenSans-Semibold.ttf');
+  src: url('../bower_components/open-sans-fontface/fonts/Bold/OpenSans-Bold.svg');
   font-weight: 600;
 }
 
@@ -104,7 +104,7 @@ p {
 
     &:active {
       top: 4px;
-     /* margin-bottom: 16px;*/
+      /* margin-bottom: 16px;*/
       box-shadow: none;
     }
   }
@@ -185,7 +185,7 @@ header {
     }
 
     &:hover {
-      background-color: rgba(0,0,0,0.2);
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -194,12 +194,12 @@ header {
     right: 0;
     height: @headerHeight;
     line-height: @headerHeight;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 0 16px;
     transition: background-color 0.5s;
 
     &:hover {
-      background-color: rgba(0,0,0,0.2);
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
     &.red, &.join-party {
@@ -278,7 +278,7 @@ header {
 }
 
 #download {
-    padding-bottom: 16px !important;
+  padding-bottom: 16px !important;
 }
 
 #features {
@@ -591,6 +591,34 @@ footer {
 
     .desc {
 
+    }
+  }
+}
+
+#seen-on {
+  .inner {
+    text-align: center
+  }
+
+  a {
+    display: inline-block;
+    margin: 20px;
+    opacity: .8;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -ms-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+
+    img {
+      display: inline-block;
+      margin: 0;
+      height: 40px;
+      width: auto;
+    }
+
+    &:hover {
+      opacity: 1
     }
   }
 }

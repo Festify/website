@@ -16,11 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "Chart.js": "~0.2.0",
-    "cubism": "~1.6.0",
     "handlebars": "~3.0.0",
     "fontawesome": "~4.2.0",
     "normalize.css": "~3.0.2",
-    "typeahead.js": "~0.10.5"
+    "typeahead.js": "~0.10.5",
+    "open-sans-fontface": "^1.4.2"
   }
 }
