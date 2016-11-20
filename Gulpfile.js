@@ -31,10 +31,15 @@ gulp.task('styles', function() {
         .pipe(gulp.dest(path.join(dist, 'css')));
 });
 
+gulp.task('images', function() {
+    return gulp.src('img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest(path.join(dist, 'img')));
+});
+
 gulp.task('assets', function() {
     return gulp.src([
         'fonts/**/*',
-        'img/**/*',
         'js/**/*',
         'bower_components/**/*',
         'favicon.ico'
@@ -42,6 +47,6 @@ gulp.task('assets', function() {
     .pipe(gulp.dest(dist));
 });
 
-gulp.task('build', ['styles', 'pages', 'assets']);
+gulp.task('build', ['styles', 'pages', 'images', 'assets']);
 
 gulp.task('default', ['build']);
