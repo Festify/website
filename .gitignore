@@ -46,3 +46,5 @@ crashlytics-build.properties
 fabric.properties
 
 css/style.css
+
+node_modules/
