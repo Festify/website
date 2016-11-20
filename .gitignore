@@ -49,3 +49,4 @@ css/style.css
 
 node_modules/
 bower_components/
+build/
