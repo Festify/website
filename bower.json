@@ -1,0 +1,26 @@
+{
+  "name": "festify-homepage",
+  "description": "",
+  "main": "Gulpfile.js",
+  "authors": [
+    "Leo Bernard <admin@leolabs.org>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Festify/website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Chart.js": "~0.2.0",
+    "cubism": "~1.6.0",
+    "handlebars": "~3.0.0",
+    "fontawesome": "~4.2.0",
+    "normalize.css": "~3.0.2",
+    "typeahead.js": "~0.10.5"
+  }
+}
