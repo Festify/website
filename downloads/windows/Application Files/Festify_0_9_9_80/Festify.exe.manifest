@@ -4,7 +4,7 @@
   <description asmv2:iconFile="festify-logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Festify" version="0.9.9.79" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="Festify" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="neutral" processorArchitecture="x86" />
     <commandLine file="Festify.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Festify.exe" size="1354176">
-      <assemblyIdentity name="Festify" version="0.9.9.79" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="Festify" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OHaVWggDU85p8LBL5fTAAxEb24u1LtesMvm4Z4iqxeU=</dsig:DigestValue>
+        <dsig:DigestValue>AorXzMKPBX+FU6YxpvW16f+UBz8Ni/Mt1BQ/welr9+k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -115,74 +115,74 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\Festify.resources.dll" size="14336">
-      <assemblyIdentity name="Festify.resources" version="0.9.9.79" language="de" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\Festify.resources.dll" size="14848">
+      <assemblyIdentity name="Festify.resources" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="de" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>i1uGDrhXPBEg2bUKBvCm5cxdmhxu/VG/0n22MfMasGY=</dsig:DigestValue>
+        <dsig:DigestValue>WYZ7k776VWqS2dr/RutHIrkiwCUoX7HGUN5+Gj2pRKc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Festify.resources.dll" size="14336">
-      <assemblyIdentity name="Festify.resources" version="0.9.9.79" language="es" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Festify.resources.dll" size="14848">
+      <assemblyIdentity name="Festify.resources" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="es" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+1+SxbB0Ri7uBnvmnTUgZxFpxEeFvNvNxnQypMHcGDE=</dsig:DigestValue>
+        <dsig:DigestValue>Pmc2vhMj4md4TUqnIA/hu4O0iN/fOJb5Bp/IRzz1eb0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\Festify.resources.dll" size="4608">
-      <assemblyIdentity name="Festify.resources" version="0.9.9.79" language="fr" processorArchitecture="x86" />
+      <assemblyIdentity name="Festify.resources" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="fr" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ib5L/Tv4krK347bMGcJpRs4HcCNemG0XFhZOlRlG6fs=</dsig:DigestValue>
+        <dsig:DigestValue>46gkFK9RwdzoF/4fAWxqBb6iqLddHhW/oPmtMSaZuo4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\Festify.resources.dll" size="16384">
-      <assemblyIdentity name="Festify.resources" version="0.9.9.79" language="ru" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\Festify.resources.dll" size="16896">
+      <assemblyIdentity name="Festify.resources" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="ru" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IkF8tqkAIu/eIt8o+gNF3uy/KyPMgSppcNWyLiW4bec=</dsig:DigestValue>
+        <dsig:DigestValue>i6CqFfRA18scIOoFS1NoMb8AEgGjLfKgFax9LEN9I0c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sl\Festify.resources.dll" size="14336">
-      <assemblyIdentity name="Festify.resources" version="0.9.9.79" language="sl" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sl\Festify.resources.dll" size="14848">
+      <assemblyIdentity name="Festify.resources" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="sl" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vu3PeMIIJoxiUvARH/wsvLNXusArYxrr6mg8+dCH1q8=</dsig:DigestValue>
+        <dsig:DigestValue>ZyfhbRx1RYXcgZlSTBbEby0ggrZGs+y2qqRgoEQvtNM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="uk\Festify.resources.dll" size="16384">
-      <assemblyIdentity name="Festify.resources" version="0.9.9.79" language="uk" processorArchitecture="x86" />
+      <assemblyIdentity name="Festify.resources" version="0.9.9.79" publicKeyToken="2463EE65B847A212" language="uk" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>foGxXvQRSFvx1om1gmlLj6S3h0ZAMkIJQJ8zhqYXNQQ=</dsig:DigestValue>
+        <dsig:DigestValue>r45rEFXfy06YtcjeSxfu3w73aCU/OjoZy5+kZT2wN0U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -512,4 +512,4 @@
       <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />
     </application>
   </compatibility>
-<publisherIdentity name="CN=MORITZ-PC\Moritz" issuerKeyHash="75dc0a5d7aa6730238936383c7e597b6cb12aab2" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>fwsVJ1ct2klmT5bOanDBb+bTNF7lU3gXHwYPpduM8NA=</DigestValue></Reference></SignedInfo><SignatureValue>JtSr8/OOxvKLGOiunjLk52gQgHzFbDErmVkk5XEmus8OjSV+IOBvlpja7b90SRfI9LrBLOixLAPAbd032NhbFhwZLPth4yTTnVb/Xn/vyeToQrljajuLW8DJ0MQA4Qhvc70rYXWjTh9TVhsFgEHGGAmbYTboWRyh5F8eyDrpvQc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ohhwPbG1QjUnzkQjI7emv+JUoCa0J/PtJdussh0UjpyN4bbWqnOMZjOOa2g7ECh0yCVe9t0qFCxY8/1n+mBSFEsof5HBw/07xjaMKky2fENHyzBYDjmX0TxNasSP8DcZ02CH14lZtcWEe1woZC+Nf2iDFt+cxIaiKtjhiFroiTc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d0f08cdba50f061f177853e55e34d3e66fc1706ace964f6649da2d5727150b7f" Description="" Url=""><as:assemblyIdentity name="Festify.exe" version="0.9.9.80" publicKeyToken="4f16627d3c6e88f1" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MORITZ-PC\Moritz</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>MQROtOSIoQ+wQBC/FSSWCbA5KVNHL0YpW+DYTQ8jYVA=</DigestValue></Reference></SignedInfo><SignatureValue>LSrJMyEsyjkp6lXb/CxAmltisA6qwvR5SUJcUvUB5PF6V4+4SosZxycJhO90cHwU+eU+18X4eNPauIrMgl4NphRVO08+uk+SLBzjbWSumPlg+T2B8ZMRwJ05IehEKOI/KGo4ikna8PmDIZLkNsh4oBz3QtyJjWRXb1Gpig68o00=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ohhwPbG1QjUnzkQjI7emv+JUoCa0J/PtJdussh0UjpyN4bbWqnOMZjOOa2g7ECh0yCVe9t0qFCxY8/1n+mBSFEsof5HBw/07xjaMKky2fENHyzBYDjmX0TxNasSP8DcZ02CH14lZtcWEe1woZC+Nf2iDFt+cxIaiKtjhiFroiTc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQTmy/rI8jwZ1Ot3/oTt0NPjANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAATQBPAFIASQBUAFoALQBQAEMAXABNAG8AcgBpAHQAejAeFw0xNjExMjExNjQyMzFaFw0xNzExMjEyMjQyMzFaMCsxKTAnBgNVBAMeIABNAE8AUgBJAFQAWgAtAFAAQwBcAE0AbwByAGkAdAB6MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCiGHA9sbVCNSfORCMjt6a/4lSgJrQn8+0l26yyHRSOnI3httaqc4xmM45raDsQKHTIJV723SoULFjz/Wf6YFIUSyh/kcHD/TvGNowqTLZ8Q0fLMFgOOZfRPE1qxI/wNxnTYIfXiVm1xYR7XChkL41/aIMW35zEhqIq2OGIWuiJNwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAJuyP3OfEPrfr8cFI1Q+0SKV/NY+2wDGrEySZrloUpEerxixLJ6/gC+vYfpsuxEtfP1hHsw98oFNRGCN2iOs42CwbuoywEiZjPL96kO9WeczJ6+4YXRDZkVQM9MwJ0VUoBy6vaIPX/y6qUxwvRTXY3Ah7dCv7zuBTCqUTKf8eop/</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=MORITZ-PC\Moritz" issuerKeyHash="75dc0a5d7aa6730238936383c7e597b6cb12aab2" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>QLl6U/ObMPWgLk52uSpP/vG8HeHiS45TVxUqEbVVMLo=</DigestValue></Reference></SignedInfo><SignatureValue>LTjLoFFOKJQS2D1XhUduLUGBuHTZvRXk9hw7ALSVfGMyynk9hgwhyoOUTU2WSzcCh8j0IckgWXTRRwuukqXVLTy+AQb5ODJGki2+Dz1saOasOCdLObBsyevEBt0F0QO/2u5rxXrkE67usUzH/ODRVDOmptacE0NwrhZhw8wvCyQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ohhwPbG1QjUnzkQjI7emv+JUoCa0J/PtJdussh0UjpyN4bbWqnOMZjOOa2g7ECh0yCVe9t0qFCxY8/1n+mBSFEsof5HBw/07xjaMKky2fENHyzBYDjmX0TxNasSP8DcZ02CH14lZtcWEe1woZC+Nf2iDFt+cxIaiKtjhiFroiTc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ba3055b5112a1557538e4be2e11dbcf1fe4f2ab9764e2ea0f5309bf3537ab940" Description="" Url=""><as:assemblyIdentity name="Festify.exe" version="0.9.9.80" publicKeyToken="4f16627d3c6e88f1" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=MORITZ-PC\Moritz</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vWwFMWaCJqA597Vo0CBrhon2kSB7Hd/AXQ0ORsdRLck=</DigestValue></Reference></SignedInfo><SignatureValue>M5AUcj87G1nOKyl7bqJesRv3wQ3mOKw2d0jDJrh/BICjeUol2/c284o8VvFMZwWSq1cxdqMemFZmFQzqaM8H/QEVZPOBBdKJtKjXAgsvNxrr3b4+XVz4B4QY8tqe7Mrc3T1M+70w5CYuYnmxHLyi+smpg5m11krqcRXjEBQ+tvI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ohhwPbG1QjUnzkQjI7emv+JUoCa0J/PtJdussh0UjpyN4bbWqnOMZjOOa2g7ECh0yCVe9t0qFCxY8/1n+mBSFEsof5HBw/07xjaMKky2fENHyzBYDjmX0TxNasSP8DcZ02CH14lZtcWEe1woZC+Nf2iDFt+cxIaiKtjhiFroiTc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQTmy/rI8jwZ1Ot3/oTt0NPjANBgkqhkiG9w0BAQsFADArMSkwJwYDVQQDHiAATQBPAFIASQBUAFoALQBQAEMAXABNAG8AcgBpAHQAejAeFw0xNjExMjExNjQyMzFaFw0xNzExMjEyMjQyMzFaMCsxKTAnBgNVBAMeIABNAE8AUgBJAFQAWgAtAFAAQwBcAE0AbwByAGkAdAB6MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCiGHA9sbVCNSfORCMjt6a/4lSgJrQn8+0l26yyHRSOnI3httaqc4xmM45raDsQKHTIJV723SoULFjz/Wf6YFIUSyh/kcHD/TvGNowqTLZ8Q0fLMFgOOZfRPE1qxI/wNxnTYIfXiVm1xYR7XChkL41/aIMW35zEhqIq2OGIWuiJNwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAJuyP3OfEPrfr8cFI1Q+0SKV/NY+2wDGrEySZrloUpEerxixLJ6/gC+vYfpsuxEtfP1hHsw98oFNRGCN2iOs42CwbuoywEiZjPL96kO9WeczJ6+4YXRDZkVQM9MwJ0VUoBy6vaIPX/y6qUxwvRTXY3Ah7dCv7zuBTCqUTKf8eop/</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
