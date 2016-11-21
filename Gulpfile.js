@@ -21,6 +21,11 @@ gulp.task('pages', function() {
     .pipe(gulp.dest(dist));
 });
 
+gulp.task('downloads', function() {
+    return gulp.src('downloads/**/*')
+    .pipe(gulp.dest(path.join(dist, 'downloads')));
+});
+
 gulp.task('styles', function() {
     return gulp.src(['css/style.less'])
         .pipe(less())
@@ -47,6 +52,6 @@ gulp.task('assets', function() {
     .pipe(gulp.dest(dist));
 });
 
-gulp.task('build', ['styles', 'pages', 'images', 'assets']);
+gulp.task('build', ['styles', 'pages', 'images', 'assets', 'downloads']);
 
 gulp.task('default', ['build']);
