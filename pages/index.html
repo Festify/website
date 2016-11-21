@@ -25,7 +25,7 @@
             <span class="brand" itemprop="name">Festify</span>
         </a>
 
-        <a href="#download" itemprop="downloadUrl" onclick="fixOffset()" class="download" id="header-download">
+        <a href="#download" itemprop="downloadUrl" onclick="fixOffset()" class="download red" id="header-download">
             Download
         </a>
 
@@ -216,13 +216,7 @@
             <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
         </form>
 
-        <a class="FlattrButton" style="display:none;"
-           title="Support Festify"
-           data-flattr-uid="festify"
-           data-flattr-button="compact"
-           href="http://getfestify.de">
-            Flattr
-        </a>
+        <a href="https://flattr.com/thing/3771837" target="_blank">Flattr</a>
     </div>
 </section>
 
@@ -246,6 +240,7 @@
 
     window.onload = function(){
         startHeight = document.getElementById("start").offsetHeight;
+        headerDownload.className = "download";
     };
 
     window.onscroll = function(){
