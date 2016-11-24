@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Submit Feedback - Festify</title>
+    <title>Get your Party started with Festify</title>
 
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="shortcut icon" href="/favicon.ico">
 
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name="description" content="If you have found a bug or if you have an idea for a new feature, please send it to us using this feedback form.">
+    <meta name="description" content="Festify is a free Spotify-powered party app that lets your guests choose which music should be played using their smartphones. Download it today!">
 
+    <meta name="twitter:card" content="summary">
     <meta name=”twitter:site” content=”@GetFestify”>
-    <meta name="twitter:image" content="http://getfestify.de/img/festify-logo-beta.png">
+    <meta name="twitter:image" content="http://getfestify.com/img/festify-logo.png">
+    <meta name="twitter:title" content="Get your Party started with Festify!">
+    <meta name="twitter:description" content="Festify is a free Spotify-powered party app that lets your guests choose which music should be played using their smartphones. Download it today!">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/SoftwareApplication">
 
 <header class="bright">
     <div class="inner">
         <a href="/" class="logo">
-            <img src="../img/festify-logo-beta-small.png" width="40" height="40">
-            <span class="brand">Festify</span>
+            <img src="../img/festify-logo-beta-small.png" itemprop="thumbnailUrl" width="40" height="40" alt="Festify Logo">
+            <span class="brand" itemprop="name">Festify</span>
         </a>
     </div>
 </header>
@@ -28,44 +31,37 @@
     <div class="party-background"></div>
 
     <div class="inner">
-        <h1>Give us Feedback!</h1>
+        <img src="../img/festify-logo.svg" height="190" width="190" class="logo" alt="Festify Logo">
 
-        <p class="jumbo">
-            If you've found a bug in Festify or if you have a new idea or suggestion,
-            just send it to us using the feedback form below.
+        <h1>Thanks for your feedback!</h1>
+
+        <p class="jumbo" itemprop="description">
+            We'll get back to you as quickly as possible.<br>
+            Happy partying! // Leo Bernard & Moritz Gunz
         </p>
     </div>
 </section>
 
-<section class="bright" id="feedback">
+<section class="bright" id="social">
     <div class="inner">
-        <div class="error-text">
-            <h2>Oops, something went wrong while submitting your feedback. Please send us a mail.</h2>
-        </div>
-
-        <div class="success-text">
-            <h2>Thanks for your Feedback! We'll respond as soon as possible.</h2>
-        </div>
-
-        <form class="form" action="/feedback-success/" netlify>
-            <input id="name" type="text" name="Name" placeholder="Your Name">
-            <input id="mail" type="text" name="Mail" placeholder="Your E-Mail Address">
-            <select name="Platform" id="platform">
-                <option name="Mac OS App">Mac OS App</option>
-                <option name="Windows App">Windows App</option>
-                <option name="Web Client">Web Client</option>
-                <option name="Doesn't matter">Doesn't matter</option>
-            </select>
-            <textarea id="text" name="Message" placeholder="Your Feedback. Please give us as many details as possible."></textarea>
-            <button class="btn btn-primary btn-block">Submit Feedback</button>
-        </form>
+        <ul class="social">
+            <li>
+                <a href="https://twitter.com/getfestify" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="/pages/feedback.html" title="Report a bug or submit an idea"><i class="fa fa-bug"></i></a>
+            </li>
+            <li>
+                <a href="mailto:mail@getfestify.de" title="Write us a mail"><i class="fa fa-envelope-o"></i></a>
+            </li>
+        </ul>
     </div>
 </section>
 
 <footer class="dark">
     <div class="inner">
         <p class="left">
-            &copy; Leo Bernard & Moritz Gunz 2015 / <a href="impressum.html">Impressum</a>
+            &copy; <span itemprop="author">Leo Bernard & Moritz Gunz</span> 2015 / <a href="/pages/impressum.html">Impressum</a>
         </p>
 
         <p class="right">
