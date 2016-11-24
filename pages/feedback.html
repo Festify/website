@@ -47,16 +47,16 @@
             <h2>Thanks for your Feedback! We'll respond as soon as possible.</h2>
         </div>
 
-        <form class="form" action="/feedback-success/" netlify>
-            <input id="name" type="text" name="Name" placeholder="Your Name">
-            <input id="mail" type="text" name="Mail" placeholder="Your E-Mail Address">
+        <form class="form" name="Feedback" action="/feedback-success/" netlify>
+            <input id="name" type="text" name="Name" placeholder="Your Name" required>
+            <input id="mail" type="text" name="Mail" placeholder="Your E-Mail Address" required>
             <select name="Platform" id="platform">
                 <option name="Mac OS App">Mac OS App</option>
                 <option name="Windows App">Windows App</option>
                 <option name="Web Client">Web Client</option>
                 <option name="Doesn't matter">Doesn't matter</option>
             </select>
-            <textarea id="text" name="Message" placeholder="Your Feedback. Please give us as many details as possible."></textarea>
+            <textarea id="text" name="Message" placeholder="Your Feedback. Please give us as many details as possible." required></textarea>
             <button class="btn btn-primary btn-block">Submit Feedback</button>
         </form>
     </div>
