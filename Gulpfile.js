@@ -32,7 +32,10 @@ gulp.task('styles', function() {
         .pipe(unCSS({
             html: ['pages/**/*.html']
         }))
-        .pipe(minifyCSS({keepSpecialComments: 0}))
+        .pipe(minifyCSS({
+            keepSpecialComments: 0,
+            inline: ['none']
+        }))
         .pipe(gulp.dest(path.join(dist, 'css')));
 });
 
