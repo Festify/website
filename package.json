@@ -10,7 +10,7 @@
     "gulp-uncss": "^1.0.6"
   },
   "devDependencies": {
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.4",
     "gulp-html-minifier": "^0.1.8",
