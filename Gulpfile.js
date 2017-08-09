@@ -26,15 +26,15 @@ gulp.task('downloads', function() {
     .pipe(gulp.dest(path.join(dist, 'downloads')));
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', ['assets'], function() {
     return gulp.src(['css/style.less'])
-        .pipe(less())
+        .pipe(less({compress: true}))
         .pipe(unCSS({
             html: ['pages/**/*.html']
         }))
         .pipe(minifyCSS({
             keepSpecialComments: 0,
-            inline: ['none']
+            inline: ['local']
         }))
         .pipe(gulp.dest(path.join(dist, 'css')));
 });
