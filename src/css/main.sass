@@ -17,6 +17,9 @@ $mdc-theme-secondary: $background-light
 $mdc-theme-background: $background-dark
 
 @import "references"
+@import "screenshots"
+@import "steps"
+
 @import "~@material/button/mdc-button.scss"
 
 body
@@ -125,6 +128,10 @@ article
 
     .scroller
       display: none
+
+@media(max-width: $breakpoint-large)
+  article.screenshots
+    grid-template-columns: 1fr
 
 @media(max-width: $breakpoint-medium)
   body
