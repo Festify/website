@@ -20,6 +20,20 @@
   </div>
 
   <div class="scroller">Learn more</div>
+<section class="light">
+    <article>
+        <h2>As seen on</h2>
+
+        <div class="references">
+            {{ range .Site.Data.references.websites }}
+            <a href="{{ .link }}" target="_blank">
+                <img src="/img/as-seen-on/{{ .logo }}" alt="{{ .name }}">
+            </a>
+            {{ end }}
+        </div>
+    </article>
+</section>
+
 </section>
 
 {{ partial "footer" . }}

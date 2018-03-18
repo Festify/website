@@ -1,0 +1,29 @@
+{
+  "websites": [
+    {
+      "name": "Lifehacker",
+      "link": "https://lifehacker.com/festify-gives-party-guests-the-power-to-vote-for-the-ne-1696220488",
+      "logo": "lifehacker.png"
+    },
+    {
+      "name": "Product Hunt",
+      "link": "https://www.producthunt.com/posts/festify",
+      "logo": "producthunt.png"
+    },
+    {
+      "name": "iFun",
+      "link": "https://www.ifun.de/festify-spotify-party-mac-71100/",
+      "logo": "ifun.png"
+    },
+    {
+      "name": "MacLife",
+      "link": "http://www.maclife.de/news/festify-sorgt-perfekte-spotify-party-sogar-gaeste-koennen-wunschlieder-playlist-packen-10061361.html",
+      "logo": "maclife.png"
+    },
+    {
+      "name": "Caschys Blog",
+      "link": "https://stadt-bremerhaven.de/demokratische-partymucke-dank-festify/",
+      "logo": "caschy.png"
+    }
+  ]
+}
