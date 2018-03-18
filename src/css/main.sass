@@ -1,6 +1,3 @@
-@import "reset"
-@import "scroller"
-
 $site-width: 1200px
 $transition-time: 0.3s
 
@@ -16,6 +13,8 @@ $mdc-theme-primary: $primary-color
 $mdc-theme-secondary: $background-light
 $mdc-theme-background: $background-dark
 
+@import "reset"
+@import "scroller"
 @import "references"
 @import "screenshots"
 @import "steps"
@@ -54,38 +53,43 @@ p.jumbo
     @include mdc-button-filled-accessible($background-light)
 
 header
-  display: flex
-  align-items: center
-  margin: auto
-  max-width: $site-width
   position: fixed
-  top: 0
-  left: 0
-  right: 0
+  z-index: 2
   width: 100%
-  padding: 48px 64px
-
-  transition: all $transition-time
+  transition: background-color $transition-time
 
   &.scrolling
-    background-color: $background-light
-    padding-top: 24px
-    padding-bottom: 24px
+    background-color: $background-dark
 
-  > a
+    .inner nav a
+      padding-top: 16px
+      padding-bottom: 16px
+
+  .inner
     display: flex
     align-items: center
+    padding: 0 64px
+    max-width: $site-width
+    margin: auto
+    transition: padding $transition-time
 
-    img
-      width: 40px
-      margin-right: 10px
+    > a
+      display: flex
+      align-self: stretch
+      align-items: center
 
-  nav
-    display: flex
-    margin-left: auto
+      img
+        width: 40px
+        margin-right: 10px
 
-    a
-      margin-left: 1.5em
+    nav
+      display: flex
+      margin-left: auto
+
+      a
+        margin-left: 1.5em
+        padding: 48px 0
+        transition: padding $transition-time
 
 section
   display: flex
@@ -147,7 +151,11 @@ article
     font-size: 1.5em
 
   header
-    padding: 24px
+    .inner
+      padding: 0 24px
+
+      nav a
+        padding: 24px 0
 
   section
     &.jumbo
