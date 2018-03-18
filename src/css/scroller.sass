@@ -1,0 +1,29 @@
+.scroller
+  padding-top: 70px
+  position: absolute
+  bottom: 64px
+  left: 50%
+  transform: translateX(-50%)
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 50%
+    width: 24px
+    height: 24px
+    margin-left: -12px
+    border-left: 1px solid #fff
+    border-bottom: 1px solid #fff
+    transform: rotate(-45deg)
+    animation: sdb05 1.5s infinite
+
+@keyframes sdb05
+  0%
+    transform: rotate(-45deg) translate(0, 0)
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    transform: rotate(-45deg) translate(-20px, 20px)
+    opacity: 0
