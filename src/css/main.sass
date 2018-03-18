@@ -1,23 +1,10 @@
-$site-width: 1200px
-$transition-time: 0.3s
-
-$breakpoint-large: 1024px
-$breakpoint-medium: 600px
-$breakpoint-small: 480px
-
-$primary-color: #951518
-$background-light: #282b30
-$background-dark: #1c1f24
-
-$mdc-theme-primary: $primary-color
-$mdc-theme-secondary: $background-light
-$mdc-theme-background: $background-dark
-
+@import "variables"
 @import "reset"
 @import "scroller"
 @import "references"
-@import "screenshots"
 @import "steps"
+@import "screenshots"
+@import "features"
 
 @import "~@material/button/mdc-button.scss"
 
@@ -65,10 +52,17 @@ header
       padding-top: 16px
       padding-bottom: 16px
 
+      &.highlight
+        background-color: transparentize($primary-color, 0.5)
+
+        &:hover
+          background-color: transparentize($primary-color, 0.2)
+
   .inner
     display: flex
     align-items: center
     padding: 0 64px
+    box-sizing: content-box
     max-width: $site-width
     margin: auto
     transition: padding $transition-time
@@ -87,27 +81,29 @@ header
       margin-left: auto
 
       a
-        margin-left: 1.5em
-        padding: 48px 0
-        transition: padding $transition-time
+        padding: 48px 1em
+        transition: padding $transition-time, background $transition-time
+
+        &:hover
+          background-color: rgba(0,0,0,0.2)
 
 section
   display: flex
   justify-content: center
   align-items: center
 
-  padding: 1.5em 2em
+  padding: 2em
 
   background-color: $background-dark
 
-  &.light
+  &:nth-of-type(even)
     background-color: $background-light
 
   &.jumbo
     flex-direction: column
     text-align: center
     min-height: 100vh
-    background-image: linear-gradient(transparentize($background-dark, 0.1), transparentize($background-dark, 0.1)), url('/img/home-bg.jpg')
+    background-image: radial-gradient(transparentize(lighten($background-dark, 5), 0.1), transparentize(darken($background-dark, 5), 0.1)), url('/img/home-bg.jpg')
     background-position: center
     background-size: cover
 

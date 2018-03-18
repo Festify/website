@@ -1,0 +1,24 @@
+article .feature-list
+  .feature
+    display: flex
+    justify-content: space-between
+    margin-bottom: 4em
+
+    .image
+      flex: 1
+      margin-right: 4em
+
+      img
+        width: 100%
+        border: 0.2em solid rgba(255, 255, 255, 0.3)
+        border-radius: 4px
+
+    .description
+      flex: 1
+
+    &:nth-of-type(even)
+      flex-direction: row-reverse
+
+      .image
+        margin-left: 4em
+        margin-right: 0
