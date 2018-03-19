@@ -15,6 +15,9 @@
     "question": "What about Sonos?",
     "answer": "As we are very active Sonos users ourselves, we'd surely like to have that kind of functionality! However, Sonos does not have an open API we could hook into. While we will do our best, we cannot guarantee that we will get something that works to our satisfaction."
   }, {
+    "question": "Please add this feature!",
+    "answer": "We listen to your requests! Please either send us an E-Mail or contact us on Twitter. We'll take it from there. :)"
+  }, {
     "question": "I think I found a bug!",
     "answer": "Please either send us an E-Mail or contact us on Twitter. We'll take it from there. :)"
   }]
