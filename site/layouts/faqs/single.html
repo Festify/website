@@ -1,0 +1,24 @@
+{{ partial "head" . }}
+{{ partial "header" . }}
+
+<section class="content">
+    <article class="faqs">
+        {{ .Content }}
+
+        <ul>
+            {{ range $.Site.Data.faqs.questions }}
+            <li>
+                <h3>{{ .question }}</h3>
+                <blockquote>{{ .answer }}</blockquote>
+            </li>
+            {{ end }}
+        </ul>
+
+        <p>Not satisfied? Send us an Email or ask us on Twitter @<a href="https://twitter.com/GetFestify">GetFestify</a></a></p>
+    </article>
+</section>
+
+{{ partial "social" . }}
+
+{{ partial "footer" . }}
+{{ partial "foot" . }}
