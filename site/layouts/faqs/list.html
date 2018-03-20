@@ -6,10 +6,10 @@
         {{ .Content }}
 
         <ul>
-            {{ range $.Site.Data.faqs.questions }}
+            {{ range .Data.Pages }}
             <li>
-                <h3>{{ .question }}</h3>
-                <blockquote>{{ .answer }}</blockquote>
+                <h3 id="{{ .Title | urlize }}">{{ .Title }}</h3>
+                <blockquote>{{ .Content }}</blockquote>
             </li>
             {{ end }}
         </ul>

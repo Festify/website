@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Does Festify support Spotify Connect?"
 date: 2018-03-18T21:44:08+01:00
 draft: false
 ---
