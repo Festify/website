@@ -24,10 +24,10 @@
 </section>
 
 <section>
-    <article>
+    <article class="as-seen-on">
         <h2>As seen on</h2>
 
-        <div class="references">
+        <div>
             {{ range .Site.Data.references.websites }}
             <a href="{{ .link }}" target="_blank">
                 <img src="/img/as-seen-on/{{ .logo }}" alt="{{ .name }}">
@@ -38,24 +38,22 @@
 </section>
 
 <section>
-    <article>
+    <article class="steps">
         <h2>Using Festify is Easy</h2>
-        <div class="steps">
-            <dl>
-                <dt><img src="/img/steps/step1.jpg" alt="Create Party Screenshot"></dt>
-                <dd>You create a new party in your browser and get a party code</dd>
-            </dl>
-
-            <dl>
-                <dt><img src="/img/steps/step2.jpg" alt="Join Party Screenshot"></dt>
-                <dd>Your guests enter the party code in their mobile browser</dd>
-            </dl>
-
-            <dl>
-                <dt><img src="/img/steps/step3.jpg" alt="Party Queue Screenshot"></dt>
-                <dd>Everyone votes to decide which tracks should be played</dd>
-            </dl>
-        </div>
+        <ul>
+            <li>
+                <img src="/img/steps/step1.jpg" alt="Create Party Screenshot">
+                <p>You create a new party in your browser and get a party code</p>
+            </li>
+            <li>
+                <img src="/img/steps/step2.jpg" alt="Join Party Screenshot">
+                <p>Your guests enter the party code in their mobile browser</p>
+            </li>
+            <li>
+                <img src="/img/steps/step3.jpg" alt="Party Queue Screenshot">
+                <p>Everyone votes to decide which tracks should be played</p>
+            </li>
+        </ul>
     </article>
 </section>
 
@@ -67,10 +65,10 @@
 </section>
 
 <section>
-    <article>
+    <article class="features">
         <h2>Features</h2>
 
-        <ul class="feature-list">
+        <ul>
             <li class="feature">
                 <div class="image">
                     <img src="/img/features/create.jpg" alt="Creating a Party">
