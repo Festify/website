@@ -24,10 +24,10 @@
 </section>
 
 <section>
-    <article>
+    <article class="as-seen-on">
         <h2>As seen on</h2>
 
-        <div class="references">
+        <div>
             {{ range .Site.Data.references.websites }}
             <a href="{{ .link }}" target="_blank">
                 <img src="/img/as-seen-on/{{ .logo }}" alt="{{ .name }}">
