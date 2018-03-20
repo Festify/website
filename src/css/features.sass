@@ -1,3 +1,5 @@
+@import "variables"
+
 article.features
   li
     display: flex
@@ -24,3 +26,16 @@ article.features
         margin-right: 0
   a
     text-decoration: underline
+
+  @media (max-width: $breakpoint-medium)
+    li
+      align-items: center
+      flex-direction: column !important
+      margin-bottom: 2em
+
+      .image
+        margin: 0 0 1em 0
+
+      &:nth-of-type(even)
+        .image
+          margin: 0 0 1em 0
