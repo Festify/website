@@ -17,13 +17,6 @@ export default {
             }
         ]
     },
-
-    plugins: [
-        new webpack.ProvidePlugin({
-            "fetch": "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch"
-        })
-    ],
-
     context: path.join(__dirname, "src"),
     entry: {
         app: ["./js/app"]
@@ -33,5 +26,11 @@ export default {
         publicPath: "/",
         filename: "[name].js"
     },
-    externals: [/^vendor\/.+\.js$/]
+    externals: [/^vendor\/.+\.js$/],
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            "fetch": "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch"
+        })
+    ],
 };
