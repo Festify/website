@@ -1,5 +1,5 @@
 import gulp from "gulp";
-import {spawn} from "child_process";
+import { spawn } from "child_process";
 import hugoBin from "hugo-bin";
 import gutil from "gulp-util";
 import flatten from "gulp-flatten";
@@ -42,7 +42,9 @@ gulp.task("js", (cb) => {
     const myConfig = Object.assign({}, webpackConfig);
 
     webpack(myConfig, (err, stats) => {
-        if (err) throw new gutil.PluginError("webpack", err);
+        if (err) {
+            throw new gutil.PluginError("webpack", err);
+        }
         gutil.log("[webpack]", stats.toString({
             colors: true,
             progress: true
@@ -81,7 +83,7 @@ function buildSite(cb, options, environment = "development") {
 
     process.env.NODE_ENV = environment;
 
-    return spawn(hugoBin, args, {stdio: "inherit"}).on("close", (code) => {
+    return spawn(hugoBin, args, { stdio: "inherit" }).on("close", (code) => {
         if (code === 0) {
             browserSync.reload();
             cb();
