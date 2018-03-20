@@ -5,7 +5,7 @@
     <img src="/img/festify-logo.svg" alt="Festify Jumbo Logo">
 
     <h1>Get your Party started with Festify</h1>
-    <p class="jumbo">
+    <p>
         Festify is a free Spotify-powered app that lets your guests
         choose which music should be played using their smartphones.
     </p>
@@ -42,17 +42,17 @@
         <h2>Using Festify is Easy</h2>
         <div class="steps">
             <dl>
-                <dt><img src="/img/steps/step1.jpg" alt="iPhone Screenshot"></dt>
+                <dt><img src="/img/steps/step1.jpg" alt="Create Party Screenshot"></dt>
                 <dd>You create a new party in your browser and get a party code</dd>
             </dl>
 
             <dl>
-                <dt><img src="/img/steps/step2.jpg" alt="iPhone Screenshot"></dt>
+                <dt><img src="/img/steps/step2.jpg" alt="Join Party Screenshot"></dt>
                 <dd>Your guests enter the party code in their mobile browser</dd>
             </dl>
 
             <dl>
-                <dt><img src="/img/steps/step3.jpg" alt="TV Mode Screenshot"></dt>
+                <dt><img src="/img/steps/step3.jpg" alt="Party Queue Screenshot"></dt>
                 <dd>Everyone votes to decide which tracks should be played</dd>
             </dl>
         </div>
@@ -87,28 +87,97 @@
 
             <li class="feature">
                 <div class="image">
-                    <img src="/img/features/create.jpg" alt="Creating a Party">
+                    <img src="/img/features/spotify.jpg" alt="Festify is Spotify-Powered">
                 </div>
 
                 <div class="description">
-                    <h3>Super easy Setup</h3>
+                    <h3>Spotify-Powered</h3>
                     <p>
-                        Creating a Party using Festify couldn't be simpler.
-                        Just log in with your Spotify Premium Account and have fun.
+                        Festify uses Spotify's huge music library so your guests can
+                        choose from millions of tracks. An internet connection and a
+                        Spotify Premium account are all you need to get your next
+                        Party started.
                     </p>
                 </div>
             </li>
 
             <li class="feature">
                 <div class="image">
-                    <img src="/img/features/create.jpg" alt="Creating a Party">
+                    <img src="/img/features/browsers.png" alt="Festify is Browser-Based">
                 </div>
 
                 <div class="description">
-                    <h3>Super easy Setup</h3>
+                    <h3>Browser Based</h3>
                     <p>
-                        Creating a Party using Festify couldn't be simpler.
-                        Just log in with your Spotify Premium Account and have fun.
+                        Festify is fully browser-based, so it can be used anywhere a
+                        modern web browser can be. Playback is supported in Google Chrome
+                        and Firefox.
+                    </p>
+                </div>
+            </li>
+
+            <li class="feature">
+                <div class="image">
+                    <img src="/img/features/voting.jpg" alt="Democratic Voting">
+                </div>
+
+                <div class="description">
+                    <h3>Democratic Voting</h3>
+                    <p>
+                        Your guests can vote for songs using their smartphones. The
+                        more people vote for a track, the higher it moves up your queue.
+                        Using this system, Festify will only play the music that your
+                        guests like.
+                    </p>
+                </div>
+            </li>
+
+            <li class="feature">
+                <div class="image">
+                    <img src="/img/features/tv-mode.jpg" alt="TV Mode">
+                </div>
+
+                <div class="description">
+                    <h3>TV Mode</h3>
+                    <p>
+                        Festify features a TV Mode that is designed to look good on your
+                        computer, notebook, TV, or projector. Fan art of each playing artist
+                        from <a href="https://fanart.tv" target="_blank">Fanart.TV</a>
+                        automatically appears in the background. If no fan art is available,
+                        the TV Mode shows the current album cover.
+                    </p>
+                </div>
+            </li>
+
+            <li class="feature">
+                <div class="image">
+                    <img src="/img/features/admin-mode.jpg" alt="Fallback Playists">
+                </div>
+
+                <div class="description">
+                    <h3>Admin Mode</h3>
+                    <p>
+                        As the party host, you can control Festify using your Smartphone (or
+                        from any other device) by logging with the same Spotify account that
+                        was used to create the party. Admin Modeincludes skipping and deleting
+                        tracks from the queue and pausing the player if needed.
+                    </p>
+                </div>
+            </li>
+
+            <li class="feature">
+                <div class="image">
+                    <img src="/img/features/fallback.jpg" alt="Fallback Playists">
+                </div>
+
+                <div class="description">
+                    <h3>Fallback Playlists</h3>
+                    <p>
+                        Sometimes, your guests are too lazy to add new tracks to your
+                        party queue, but we've got you covered. When you create a Festify
+                        Party, you can add a Fallback Playlist from your Spotify Account
+                        that will be played if no other songs are queued. You can also
+                        shuffle the list so that you don't always start with the same track.
                     </p>
                 </div>
             </li>
@@ -116,4 +185,7 @@
     </article>
 </section>
 
+{{ partial "social" . }}
+
 {{ partial "footer" . }}
+{{ partial "foot" . }}

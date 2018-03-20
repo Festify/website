@@ -1,10 +1,16 @@
 @import "variables"
 @import "reset"
-@import "scroller"
-@import "references"
-@import "steps"
-@import "screenshots"
+
+@import "default"
+@import "faqs"
 @import "features"
+@import "footer"
+@import "jumbo"
+@import "references"
+@import "screenshots"
+@import "scroller"
+@import "social"
+@import "steps"
 
 @import "~@material/button/mdc-button.scss"
 
@@ -24,10 +30,6 @@ h1
 
 h2
   text-align: center
-
-p.jumbo
-  font-size: 1.2em
-  margin-bottom: 64px
 
 .btn
   padding: 16px 32px
@@ -99,39 +101,8 @@ section
   &:nth-of-type(even)
     background-color: $background-light
 
-  &.jumbo
-    flex-direction: column
-    text-align: center
-    min-height: 100vh
-    background-image: radial-gradient(transparentize(lighten($background-dark, 5), 0.1), transparentize(darken($background-dark, 5), 0.1)), url('/img/home-bg.jpg')
-    background-position: center
-    background-size: cover
-
-    transition: padding $transition-time
-
-    padding-top: 136px
-    padding-bottom: 200px
-
-    img
-      width: 200px
-      margin-bottom: 3em
-
-    p
-      max-width: 700px
-
 article
   max-width: $site-width
-
-@media(max-height: 930px)
-  section.jumbo
-    padding-bottom: 100px
-
-    .scroller
-      display: none
-
-@media(max-width: $breakpoint-large)
-  article.screenshots
-    grid-template-columns: 1fr
 
 @media(max-width: $breakpoint-medium)
   body
@@ -152,18 +123,3 @@ article
 
       nav a
         padding: 24px 0
-
-  section
-    &.jumbo
-      padding-top: 88px
-      padding-bottom: 2em
-
-      .scroller
-        display: none
-
-      img
-        width: 150px
-        margin-bottom: 2em
-
-  p.jumbo
-    margin-bottom: 1.5em

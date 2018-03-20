@@ -1,3 +1,5 @@
+@import "variables"
+
 article.screenshots
   display: grid
   grid-template-columns: 2fr 2fr
@@ -6,3 +8,7 @@ article.screenshots
 
   img
     width: 100%
+
+@media(max-width: $breakpoint-large)
+  article.screenshots
+    grid-template-columns: 1fr
