@@ -1,7 +1,7 @@
 ---
 title: "Do I need Spotify Premium to use Festify?"
-date: 2018-03-18T21:44:08+01:00
 draft: false
+weight: 1
 ---
 
 Yes.
