@@ -1,7 +1,7 @@
 ---
 title: "Which browsers do you support?"
-date: 2018-03-20T11:52:32+01:00
 draft: false
+weight: 2
 ---
 
 Festify supports all so-called 'evergreen' browsers. That is, every common browser except for Internet Explorer. Our personal recommendations are Google Chrome, Mozilla Firefox or Safari. But any other browser that is based on one of them (like Opera, which is based on Google Chrome) works just as well.
