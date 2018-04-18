@@ -1,0 +1,23 @@
+{{ partial "head" . }}
+{{ partial "header" . }}
+
+<section class="content">
+    <article>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</section>
+
+{{ range .Data.Pages }}
+<section>
+    <article class="update">
+        <h2 id="{{ .Title | urlize }}">{{ .Title }}</h2>
+        {{ .Content }}
+    </article>
+</section>
+{{ end }}
+
+{{ partial "social" . }}
+
+{{ partial "footer" . }}
+{{ partial "foot" . }}
