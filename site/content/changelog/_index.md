@@ -1,4 +1,4 @@
 ---
-title: Updates
+title: Changelog
 type: updates
 ---
