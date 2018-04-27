@@ -1,9 +1,19 @@
 <!doctype html>
-<html lang="{{ $.Site.Language.Lang }}">
+<html lang="{{ $.Site.Language.Lang }}" itemscope itemtype="http://schema.org/WebApplication">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="{{- .Params.meta.description | default $.Site.Params.description -}}">
+    <meta name="description" itemprop="description" content="{{- .Params.meta.description | default $.Site.Params.description -}}">
+
+    <meta itemprop="applicationCategory" content="Multimedia">
+    <meta itemprop="applicationSubCategory" content="Social Jukebox">
+    <meta itemprop="isAccessibleForFree" content="true">
+    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <meta itemprop="name" content="Social Jukebox">
+      <meta itemprop="price" content="0">
+      <meta itemprop="priceCurrency" content="EUR">
+    </span>
+    <meta itemprop="sameAs" content="https://festify.us">
 
     {{ if ne .Params.meta.title nil }}
     <title>{{ .Params.meta.title }}</title>
@@ -17,7 +27,7 @@
     <meta name="description" content="{{ $.Site.Params.description }}">
     {{ end }}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" itemprop="thumbnailUrl">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="stylesheet" href="/css/main.css"/>

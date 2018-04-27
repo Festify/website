@@ -2,7 +2,7 @@
 {{ partial "header" . }}
 
 <section class="jumbo">
-    <img src="/img/festify-logo.svg" alt="Festify Jumbo Logo">
+    <img src="/img/festify-logo.svg" alt="Festify Jumbo Logo" itemprop="image">
 
     <h1>Get your Party started with Festify</h1>
     <p>
@@ -11,11 +11,16 @@
     </p>
 
     <div>
-        <a class="btn mdc-button mdc-button--raised" data-mdc-auto-init="MDCRipple" href="https://festify.us/?create">
+        <a class="btn mdc-button mdc-button--raised"
+           data-mdc-auto-init="MDCRipple"
+           href="https://festify.us/?create"
+           itemprop="downloadUrl">
             Create a party
         </a>
-        <a class="btn mdc-button secondary mdc-button--raised" data-mdc-auto-init="MDCRipple"
-           href="https://festify.us/?join">
+        <a class="btn mdc-button secondary mdc-button--raised"
+           data-mdc-auto-init="MDCRipple"
+           href="https://festify.us/?join"
+           itemprop="downloadUrl">
             Join a party
         </a>
     </div>
