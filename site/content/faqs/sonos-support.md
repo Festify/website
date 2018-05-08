@@ -4,4 +4,4 @@ draft: false
 weight: 4
 ---
 
-As we are very active Sonos users ourselves, we'd surely like to have that kind of functionality! However, Sonos does not have an open API we could hook into. While we will do our best, we cannot guarantee that we will get something that works to our satisfaction.
+As we are very active Sonos users ourselves, we'd surely like to have that kind of functionality! Sonos is planning on opening a developer platform in 2018, which we hope, will allow us to finally provide Sonos support. We have applied for the closed beta already and are currently awaiting response / invitation.
