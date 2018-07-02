@@ -15,6 +15,10 @@
     </span>
     <meta itemprop="sameAs" content="https://festify.us">
 
+    {{ with .Params.meta.robots }}
+    <meta name="robots" content="{{.}}">
+    {{ end }}
+
     {{ if ne .Params.meta.title nil }}
     <title>{{ .Params.meta.title }}</title>
     {{ else }}
